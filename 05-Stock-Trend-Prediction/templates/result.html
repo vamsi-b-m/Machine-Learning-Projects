@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Trend Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200vh;
+            background-color: rgba(31, 35, 48, 0.637);
+        }
+        .container {
+            text-align: center;
+        }
+        iframe {
+            width: 150%; /* Adjusted width */
+            height: 60vh;
+            border: none;
+            margin-left: -25%; /* Adjusted margin */
+        }
+        select {
+            width: 250px; /* Set the width of the select dropdown */
+            padding: 4px; /* Add some padding for better appearance */
+            font-size: 16px; /* Adjust font size */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Trend Prediction</h1>
+        <form action="/result" method="POST">
+            <label for="stocks">Choose the Stock : </label>
+            <select id="stocks" name="stocks">
+                <option value="choose">Choose A Stock</option>
+                {% for stock in stocks %}
+                <option value="{{ stock }}">{{ stock }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Submit"><br><br>
+        </form>        
+        <!-- Display the graphs -->
+        <iframe src="../static/close_price.html" frameborder="0"></iframe>
+        <iframe src="../static/200ma.html" frameborder="0"></iframe>
+        <iframe src="../static/prediction_graph.html" frameborder="0"></iframe>
+        <!-- Add more iframe elements with the src attribute pointing to other HTML files -->
+    </div>
+</body>
+</html>
