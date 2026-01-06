@@ -1,0 +1,15 @@
+[submodule "01-ML-Hello-World"]
+	path = 01-ML-Hello-World
+	url = https://github.com/vamsi-b-m/01-ML-Hello-World.git
+[submodule "02-ML-Sample-Practice"]
+	path = 02-ML-Sample-Practice
+	url = https://github.com/vamsi-b-m/02-ML-Sample-Practice.git
+[submodule "03-ML-House-Price-Prediction"]
+	path = 03-ML-House-Price-Prediction
+	url = https://github.com/vamsi-b-m/03-ML-House-Price-Prediction.git
+[submodule "04-Movie-Recommendation-System"]
+	path = 04-Movie-Recommendation-System
+	url = https://github.com/vamsi-b-m/04-Movie-Recommendation-System.git
+[submodule "05-Stock-Trend-Prediction"]
+	path = 05-Stock-Trend-Prediction
+	url = https://github.com/vamsi-b-m/05-Stock-Trend-Prediction.git
