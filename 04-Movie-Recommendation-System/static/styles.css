@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 2500px;
+  font-family: Arial, sans-serif;
+  background-color: #14121ad6;
+}
+
+nav {
+  background-color: #14121a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center align items vertically */
+  border-bottom: 2px solid #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.logo-image {
+  height: 30px;
+  width: 30px; /* Set width to match height for a circular shape */
+  border-radius: 50%; /* Makes the image circular */
+  overflow: hidden; /* Ensures the image doesn't overflow the circle */
+}
+
+.logo-name {
+  color: #fff;
+  font-size: 18px;
+  margin-left: 10px; /* Add some space between logo and name */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.content {
+  color: #fff;
+  padding: 20px;
+}
+
+.search-form {
+  margin-top: 20px;
+  background-image: url('/static/form-bg-image.png');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 600px;
+  width: 1000px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-container {
+  position: absolute;
+  bottom: 50px; /* Position at the bottom of the form */
+  left: 50px; /* Adjust left position as needed */
+}
+
+
+input[type="text"] {
+  padding: 10px 35px 10px 45px; /* Adjust padding to create a gap after the search icon */
+  height: 30px;
+  width: 430px;
+  border: 1px solid #ccc;
+  background-color: #14121a;
+  border-radius: 15px;
+  position: relative;
+  font-size: 16px; /* Set the font size for the default text */
+}
+
+.search_string {
+  display: flex;
+  font-size: 32px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 75%;
+  fill: #f9f7f7; /* Adjust the color of the search icon */
+}
+
+.search-icon img {
+  width: 20px; /* Adjust the width of the search icon */
+  height: 20px; /* Adjust the height of the search icon */
+}
+
+button {
+  position: absolute;
+  top: 68%;
+  right: 10px;
+  background-color: #112073;
+  color: white;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  padding: 2%;
+  margin: 1px;
+  width: 77px;
+
+}
+
+button:hover {
+  background-color: #043b57;
+  transform: scale(1.1); /* Change background color when hovered */
+}
+
+.genre-buttons {
+  margin-top: 20px;
+}
+
+.genre-button {
+  display: inline-flex;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #252733;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: transform 0.2s; /* Add a smooth transition effect */
+}
+
+.genre-button:hover {
+  background-color: #0d0f15;
+  transform: scale(1.2); /* Scale the button by 10% when hovered */
+}
+
+.movie-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.movie-list li {
+  margin-bottom: 5px;
+}
+
+/* Poster */
+.poster {
+  border-radius: 5px;
+  flex: 0 0 calc(20% - 5%);
+  margin: 0 2.5%;
+  height: 500px; /* Adjust height to fit normal movie poster size */
+   /* Adjust width to fit normal movie poster size */
+}
+
+/* Poster container */
+.poster-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Iframe */
+.poster iframe {
+  width: 100%;
+  height: 95%;
+}
+
+/* Poster row */
+.poster-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Add margin between rows */
+}
+
+/* Clearfix */
+.poster-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+  

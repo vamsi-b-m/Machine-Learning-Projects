@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Recommender</title>
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body style="text-align:center">
+
+  <!-- Navigation Section -->
+  <nav>
+    <div class="logo">
+      <img src="../static/logo.png" alt="Logo" class="logo-image">
+      <span class="logo-name">Movie Rec</span>
+    </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content Section -->
+  <div class="content">
+    <br><br>
+
+    <!-- Search Form Section -->
+    <form action="/process" target="output_frame" method="GET" class="search-form">
+        <div class="search-container">
+            <h2 class="search_string">Find a Movie for You</h2>
+            <input type="text" id="search" name="search" placeholder="Search for a movie...">
+            <span class="search-icon"><img src="../static/search-icon.png" alt="Search Icon"></span>
+            <button type="submit">Search</button>
+        </div>
+    </form>
+
+    <!-- Genre Buttons Section -->
+    <div class="genre-buttons">
+      <a href="/process?genre=Action" class="genre-button" target="output_frame">Action</a>
+      <a href="/process?genre=Comedy" class="genre-button" target="output_frame">Comedy</a>
+      <a href="/process?genre=Drama" class="genre-button" target="output_frame">Drama</a>
+      <a href="/process?genre=Mystery" class="genre-button" target="output_frame">Mystery</a>
+      <a href="/process?genre=Thriller" class="genre-button" target="output_frame">Thriller</a>
+      <a href="/process?genre=Crime" class="genre-button" target="output_frame">Crime</a>
+      <a href="/process?genre=Documentary" class="genre-button" target="output_frame">Documentary</a>
+      <a href="/process?genre=Adventure" class="genre-button" target="output_frame">Adventure</a>
+      <a href="/process?genre=Fantasy" class="genre-button" target="output_frame">Fantasy</a>
+      <a href="/process?genre=Music" class="genre-button" target="output_frame">Music</a><br>
+      <a href="/process?genre=Horror" class="genre-button" target="output_frame">Horror</a>
+      <a href="/process?genre=War" class="genre-button" target="output_frame">War</a>
+      <a href="/process?genre=Science_Fiction" class="genre-button" target="output_frame">Science_Fiction</a>
+      <a href="/process?genre=Family" class="genre-button" target="output_frame">Family</a>
+      <a href="/process?genre=Animation" class="genre-button" target="output_frame">Animation</a>
+      <a href="/process?genre=Romance" class="genre-button" target="output_frame">Romance</a>
+      <a href="/process?genre=Comedy" class="genre-button" target="output_frame">Comedy</a>
+      <a href="/process?genre=Western" class="genre-button" target="output_frame">Western</a>
+      <a href="/process?genre=TV_Movie" class="genre-button" target="output_frame">TV_Movie</a>
+      <a href="/process?genre=History" class="genre-button" target="output_frame">History</a>
+    </div><br>
+    
+    <!-- Movie Poster Section -->
+    <div class="poster-container">
+      {% for movie_poster in movie_posters %}
+        {% if loop.index0 % 5 == 0 %}
+          <div class="poster-row">
+        {% endif %}
+        <div class="poster">
+          <iframe src="{{ movie_poster }}" frameborder="0"></iframe>
+        </div>
+        {% if loop.index % 5 == 0 or loop.last %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+
+  <!-- Footer Section -->
+  <footer>
+    <!-- Footer content here -->
+  </footer>
+
+</body>
+</html>

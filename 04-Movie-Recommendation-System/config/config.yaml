@@ -1,0 +1,33 @@
+# Data Ingestion Configuration
+data_ingestion_config:
+  kaggle_dataset_url: "ashpalsingh1525/imdb-movies-dataset"
+  zip_data_dir: "zip_data"
+  ingested_data_dir: "ingested_data"
+
+data_cleaning_config:
+  cleaned_data_dir: "cleaned_data"
+  cleaned_data_file_name: "cleaned_data.csv"
+
+schema_config:
+  schema_dir: schema
+  schema_file_name: schema.yml
+
+data_validation_config:
+  report_file_name: report.json
+  report_page_file_name: report.html
+  validated_data_dir: "validated_data"
+  validated_data_file_name: "validated_data.csv"
+
+data_manipulation_config:
+  processed_data_dir: "processed_data"
+  processed_data_file_name: "processed_data.csv"
+  processed_pickle_data_dir: "pickle_data"
+  processed_data_pickle_file_name: "processed_pickle.pkl"
+
+model_generator_config:
+  generated_data_dir : "generated_data"
+  generated_data_file_name : "generated_data.csv"
+ 
+training_pipeline_config:
+  pipeline_name: "movie_recommendation"
+  artifact_dir: "artifact"
